@@ -87,6 +87,7 @@
 						  <li class="nav-item"><a class="nav-link scrollto" href="#select">select</a></li>
 						  <li class="nav-item"><a class="nav-link scrollto" href="#where">where</a></li>
 						  <li class="nav-item"><a class="nav-link scrollto" href="#whereRaw">whereRaw</a></li>
+						  <li class="nav-item"><a class="nav-link scrollto" href="#whereLike">whereLike</a></li>
 						  <li class="nav-item"><a class="nav-link scrollto" href="#whereBetween">whereBetween</a></li>
 						  <li class="nav-item"><a class="nav-link scrollto" href="#whereIn">whereIn</a></li>
 						  <li class="nav-item"><a class="nav-link scrollto" href="#join">join</a></li>
@@ -114,7 +115,7 @@
 				    <header class="docs-header">
 					    <h1 class="docs-heading">Introduction</h1>
 					    <section class="docs-intro">
-						    <p>This is a collection of Node.js modules that can be used to build a basic RESTful API. The code includes modules for creating models, controllers, and validation rules. These modules can be used as building blocks for your Node.js application.</p>
+						    <p>This is a collection of Banyumuli modules that can be used to build a basic RESTful API. The code includes modules for creating models, controllers, and validation rules. These modules can be used as building blocks for your application.</p>
 						</section><!--//docs-intro-->
 						
 				    </header>
@@ -406,6 +407,7 @@ createUser = async (req, res) => {
 								<code>select</code>,
 								<code>where</code>,
 								<code>whereRaw</code>,
+								<code>whereLike</code>,
 								<code>whereBetween</code>,
 								<code>whereIn</code>,
 								<code>join</code>,
@@ -451,6 +453,17 @@ const result = await this.where('column', 'value').getResult();
 						  <pre class="shadow-lg rounded">
 							<code class="javascript hljs">
 const result = await this.whereRaw('column > 10').getResult();
+							</code>
+						  </pre>
+						</div>
+					  </section>
+
+					  <section class="docs-section" id="whereLike">
+						<h3 class="section-heading">whereLike(condition)</h3>
+						<div class="docs-code-block">
+						  <pre class="shadow-lg rounded">
+							<code class="javascript hljs">
+const result = await this.whereLike('column', 'value').getResult();
 							</code>
 						  </pre>
 						</div>
